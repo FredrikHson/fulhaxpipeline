@@ -7,9 +7,9 @@ def call(String status = 'success')
     switch( status )
     {
         case "success":
-        slackSend color: 'good', message: "${org} ${repo} ${branch} built successfully"
+        slackSend color: 'good', message: "${org}/${repo}/${branch} built successfully"
         break
         case "fail":
-        slackSend color: 'bad', message: "${org} ${repo} ${branch} failed to build ${env.BUILD_URL}console"
+        slackSend color: 'bad', message: "${org}/${repo}/${branch} failed to build ${env.BUILD_URL}console"
     }
 }
