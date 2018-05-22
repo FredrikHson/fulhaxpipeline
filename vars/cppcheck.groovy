@@ -13,5 +13,7 @@ def call(String folders = '.')
     messagesPattern: '',
     parserConfigurations: [[parserName: 'cppcheck',
     pattern: 'cppcheck.txt']],
+    failedTotalHigh: '0',
+    unstableTotalNormal: '0',
     unHealthy: ''
 }
