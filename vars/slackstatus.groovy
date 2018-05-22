@@ -14,6 +14,8 @@ def call(String status = 'success')
         slackSend color: '#ff0000', message: "${org}/${repo}/${branch} failed to build ${env.BUILD_URL}console"
         break
         case "facepalm":
+        slackSend color: '#6c3000', message: "${org}/${repo}/${branch} facepalmed to hard ${env.BUILD_URL}"
+        break
         case "unstable":
         slackSend color: '#6c3000', message: "${org}/${repo}/${branch} had an earthquake ${env.BUILD_URL}"
         break
