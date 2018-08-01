@@ -1,7 +1,7 @@
 def call()
 {
     sh """
-    cppcheck -q  --suppress="unusedFunction" --suppress="missingIncludeSystem" --suppress="unmatchedSuppression" --enable=all --template="{file},{line},{severity},{id},{message}" --project=$(find -name compile_commands.json | head -n1) 2>&1 | tee cppcheck.txt
+    cppcheck -q  --suppress="unusedFunction" --suppress="missingIncludeSystem" --suppress="unmatchedSuppression" --enable=all --template="{file},{line},{severity},{id},{message}" --project=build/compile_commands.json 2>&1 | tee cppcheck.txt
     """
     warnings canComputeNew: false,
     canResolveRelativePaths: false,
